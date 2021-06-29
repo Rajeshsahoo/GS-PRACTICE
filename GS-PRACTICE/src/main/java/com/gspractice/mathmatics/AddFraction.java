@@ -1,5 +1,10 @@
 package com.gspractice.mathmatics;
 
+/**
+ * @author Rajeshkumar_Sahoo
+ * Program to find fraction value
+ *
+ */
 public class AddFraction {
 
 	public static void main(String[] args) {
