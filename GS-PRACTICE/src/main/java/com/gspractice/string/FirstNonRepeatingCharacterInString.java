@@ -8,7 +8,7 @@ public class FirstNonRepeatingCharacterInString {
 
 	public static void main(String[] args) {
 		//String input = "apple";
-		String input = "aappletty";
+		String input = "xxyyzz";
 		System.out.println(findFirstNonRepeatingChar(input));
 	}
 
