@@ -10,6 +10,7 @@ public class PanGram {
 	public static void main(String[] args) {
 		System.out.println(isPanGram("The quick brown fox jumps over the lazy dog"));
 		System.out.println(isPanGram("The quick brown fox jumps over the dog"));
+		System.out.println(isPanGram("thequickbrownfoxjumpsoverthelazydog"));
 	}
 
 	private static boolean isPanGram(String input) {
