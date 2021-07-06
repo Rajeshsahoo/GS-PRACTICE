@@ -44,7 +44,8 @@ public class BestAvgGrade {
 	public static void main(String[] args) {
 		String arr[][] = { { "Sarah", "91" }, { "Goldie", "92" }, { "Elaine", "93" }, { "Elaine", "95" },
 				{ "Goldie", "94" }, { "Sarah", "93" } };
-		System.out.println(bestAverageGrade(arr));
+		String arr1[][] = {{"Bob","87"}, {"Mike", "35"},{"Bob", "52"}, {"Jason","35"}, {"Mike", "55"}, {"Jessica", "99"}};
+		System.out.println(bestAverageGrade(arr1));
 	}
 
 	private static Integer bestAverageGrade(String[][] arr) {
