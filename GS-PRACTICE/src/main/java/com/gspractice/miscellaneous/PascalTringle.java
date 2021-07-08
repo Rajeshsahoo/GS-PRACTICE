@@ -10,8 +10,15 @@ import java.util.List;
 public class PascalTringle {
 
 	public static void main(String[] args) {
-		printPascal(5);
+		printPascal(4);
 		System.out.println(storePascalInList(5));
+		findValueFromPascal(2,1);
+		findValueFromPascal(0,0);
+		findValueFromPascal(8,4);
+	}
+
+	private static void findValueFromPascal(int row, int col) {
+		System.out.println(storePascalInList(row+1).get(row).get(col));
 	}
 
 	private static List<List<Integer>> storePascalInList(int n) {
