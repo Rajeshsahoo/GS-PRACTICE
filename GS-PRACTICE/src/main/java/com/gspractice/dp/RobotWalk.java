@@ -1,32 +1,61 @@
 package com.gspractice.dp;
 
 /**
- * @author Rajeshkumar_Sahoo
- * walking Robot problem
+ * @author Rajeshkumar_Sahoo walking Robot problem
  */
 public class RobotWalk {
 	public static void main(String[] args) {
 		Integer[] ans = walk("");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("L");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("UUU");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("ULDR");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("UDLRL");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("UDDLLRUUUDUURUDDUULLDRRRR");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
-		ans = walk("UDUDLRL");
-		System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("L");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("UUU");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("ULDR");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("UDLRL");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("UDDLLRUUUDUURUDDUULLDRRRR");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		// ans = walk("UDUDLRL");
+		//System.out.println("[" + ans[0] + " " + ans[1] + "]");
 		ans = walk1("UP DOWN 2XUP 3XDOWN LEFT RIGHT LEFT");
+		System.out.println("[" + ans[0] + " " + ans[1] + "]");
+		ans = walk2("UP DOWN 2XUP 40XDOWN 39XLEFT 69XRIGHT LEFT");
 		System.out.println("[" + ans[0] + " " + ans[1] + "]");
 		// UP DOWN 2XUP 3XDOWN LEFT RIGHT LEFT
 		// UDLRL
 		// UDLRL
 
 		// UDUDLRL
+	}
+
+	private static Integer[] walk2(String path) {
+		System.out.println("inside here");
+		Integer[] xy = new Integer[2];
+		xy[0] = 0;
+		xy[1] = 0;
+		if (path.length() == 0)
+			return xy;
+
+		char[] ch = path.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			switch (ch[i]) {
+			case 'U':
+				xy[1]++;
+				break;
+			case 'D':
+				xy[1]--;
+				break;
+			case 'L':
+				xy[0]--;
+				break;
+			case 'R':
+				xy[0]++;
+				break;
+			}
+		}
+		return xy;
 	}
 
 	private static Integer[] walk(String path) {
